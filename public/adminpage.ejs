@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn-o-vate | Admin</title>
+    <link rel="icon" href="/assets/images/Logo.png">
+    <link rel="stylesheet" href="/assets/CSS/main.css">
+    <link rel="stylesheet" href="/assets/CSS/admin.css">
+    <!-- bootstrap Link-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!------NAVIGATION BAR-------->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
+            <a class="navbar-brand" href="/"><img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2FclearLogo.png?v=1604814204563" alt="logo"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"><i class="fa fa-bars" ></i></span>
+</button>
+            <div class="collapse navbar-collapse" style="color:white !important" id="navbarNav">
+                <ul class="navbar-nav mx-auto ">
+                    <li class="nav-item active mr-1 dropdown">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown mr-1">
+                        <a class="nav-link screenSize" href="#">COURSES</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Best Picks</a>
+                            <a class="dropdown-item" href="#">Upload Course</a>
+                        </div>
+                    </li>
+                    <li class="nav-item  mr-1 dropdown">
+                        <a class="nav-link " href="/signin">REGISTER</a>
+                    </li>
+                    <li class="nav-item mr-1 dropdown">
+                        <a class="nav-link  " href="/signin">SIGN IN</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+  <div class="hero-section">
+    <div class="hero-content">
+    <div class="content">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th class="slno">Sl. no.</th>
+                    <th>Username</th>
+                    <th>Email id</th>
+                    <th>Link</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-primary">
+                    <td>1</td>
+                    <td>Clark Kent</td>
+                    <td>clarkkent@mail.com</td>
+                    <td>www.xyz.com</td>
+                    <td><button type="button" class="btn btn-success">Approve</button> <button type="button" class="btn btn-danger">Decline</button> </td>
+                </tr >
+                <tr class="table-primary">
+                    <td>2</td>
+                    <td>John Carter</td>
+                    <td>johncarter@mail.com</td>
+                    <td>www.xyz.com</td>
+                    <td><button type="button" class="btn btn-success">Approve</button> <button type="button" class="btn btn-danger">Decline</button></td>
+                </tr>          
+            </tbody>
+        </table>
+    </div>
+      </div>
+  </div>
+
+    <footer>
+        <div class="social">
+            <ul>
+                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+        <p>&copy; COPYRIGHT 2020 | DEVELOPED BY TEAM TELESTO | Sorting your learning needs . . .</p>
+    </footer>
+
+    <!-- NAVBAR ON SCROLL  -->
+    <script>
+       
+
+        $(function() {
+            $(document).scroll(function() {
+                var $nav = $(".navbar ");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > 100);
+            });
+        });
+
+        
+    </script>
+
+    <!--footer-->
+</body>
+
+</html>
