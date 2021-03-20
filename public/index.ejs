@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn-o-vate</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="/assets/CSS/main.css">
+    <!--ye cheez hata<link rel="stylesheet" href="/assets/CSS/dashboard.css">
+    <!-- bootstrap Link  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!------NAVIGATION BAR-------->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+            <a class="navbar-brand" href="/"><img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2FclearLogo.png?v=1604814204563" alt="logo"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto ">
+                    <li class="nav-item active mr-1 dropdown">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown mr-1">
+                        <a class="nav-link screenSize" href="#">COURSES</a>
+
+                        <div class="dropdown-menu">
+
+                            <a class="dropdown-item" href="#bestCourses">Best Picks</a>
+                            <a class="dropdown-item" href="#uploadCourse">Upload Course</a>
+
+                        </div>
+
+
+
+                    </li>
+                    <% if(!user) {%>
+                        <li class="nav-item  mr-1 dropdown">
+                            <a class="nav-link " href="/signin">REGISTER</a>
+
+                        </li>
+                        <li class="nav-item mr-1 dropdown">
+                            <a class="nav-link" href="/signin">SIGN IN</a>
+                        </li>
+                        <%}%>
+                            <%if(user) {%>
+                                <li class="nav-item  mr-1 dropdown">
+                                    <a class="nav-link " href="/dashboard">DASHBOARD</a>
+
+                                </li>
+                                <li class="nav-item mr-1 dropdown">
+                                    <a class="nav-link  " href="/logout">LOG OUT</a>
+                                </li>
+                                <%}%>
+
+
+                </ul>
+            </div>
+
+        </nav>
+    </section>
+
+    <!-- HERO SECTION  -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="left-content text-center ">
+                <h1>Upload Your Own Course</h1>
+                <a href="#uploadCourse"><button class="btn btn-primary mt-3 upload ">Upload</button></a>
+            </div>
+            <div class="right-content text-center ">
+                <h1>Get Best Courses For Free</h1>
+                <a href="#bestCourses"><button class="btn btn-primary mt-3 checkNow">Check Now</button></a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- COURSES SECTION  -->
+    <div class="dummyCourse" id="bestCourses"></div>
+    <section class="courses">
+        <div class="search">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Courses.." title="Type a course name">
+            <span class="search-icon"><i class="fa fa-search" ></i></span>
+        </div>
+        <div class="card-deck">
+            <div class="row" id="myCourses">
+                <div class="col-lg-3 col-md-4 ">
+                    <div class="card storeDeck">
+                        <div class="card-body ">
+                            <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2Fwebdev-adv.png?v=1604814205746" alt="webdev">
+                            <div class="product-bottom text-center">
+                                <a href="/courses/webdev">
+                                    <h3>Web development</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 ">
+                    <div class="card storeDeck">
+                        <div class="card-body ">
+                            <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2Fapp-dev.png?v=1604814204033" alt="appdev">
+
+                            <div class="product-bottom text-center">
+                                <a href="/courses/appdev">
+                                    <h3>App development</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 ">
+                    <div class="card storeDeck">
+                        <div class="card-body ">
+                            <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2Freact.png?v=1604814206050" alt="react">
+
+                            <div class="product-bottom text-center">
+
+                                <a href="courses/react">
+                                    <h3>React</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 ">
+                    <div class="card storeDeck">
+                        <div class="card-body ">
+                            <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2Fflutter.png?v=1604814208137" alt="flutter">
+
+                            <div class="product-bottom text-center">
+
+                                <a href="courses/flutter">
+                                    <h3>Flutter</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 ">
+                    <div class="card storeDeck">
+                        <div class="card-body ">
+                            <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2FphpWithSQL.jpg?v=1604814208875" alt="phpwithmysql">
+
+                            <div class="product-bottom text-center">
+
+                                <a href="courses/php-mysql">
+                                    <h3>PHP with mySQL</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 ">
+                    <div class="card storeDeck">
+                        <div class="card-body ">
+                            <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2Fwordpress.png?v=1604814204486" alt="WordPress">
+
+                            <div class="product-bottom text-center">
+
+                                <a href="courses/wordpress">
+                                    <h3>WordPress</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 ">
+                    <div class="card storeDeck">
+                        <div class="card-body ">
+                            <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2Fjava.png?v=1604814208832" alt="java">
+
+                            <div class="product-bottom text-center">
+
+                                <a href="courses/java">
+                                    <h3>JAVA</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 ">
+                    <div class="card storeDeck">
+                        <div class="card-body ">
+                            <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2FC%2B%2B.jpg?v=1604814206308" alt="c++">
+                            <div class="product-bottom text-center">
+                                <a href="courses/cpp">
+                                    <h3>C++</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- UPLAOD COURSE  -->
+
+
+    <div class="upload-course" id="uploadCourse">
+        <h1>Want To Contribute ?</h1>
+        <h2>Upload Your Course Link Here</h2>
+        <%if(user){%>
+            <div class="new-link submit-link">
+                <form class="form" action="/signin">
+                        <p class="input-line">
+                          <div class="text-center">
+                            <input class="submitBtn" type="submit" value="HEAD OVER TO DASHBOARD">
+                          </div>
+                        </p>
+                  </form>
+            </div>
+            <%} else {%>
+                <div class="new-link submit-link">
+                    <form class="form" action="/signin">
+                        <p class="input-line">
+                          <div class="text-center">
+                            <input class="submitBtn" type="submit" value="LOGIN TO BECOME A CONTRIBUTOR">
+                          </div>
+                        </p>
+                    </form>
+                </div>
+                <%}%>
+    </div>
+
+
+
+
+
+
+
+    <!-- FOOTER  -->
+    <footer>
+        <div class="social">
+            <ul>
+                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+        <p>&copy; COPYRIGHT 2020 | DEVELOPED BY TEAM TELESTO | Sorting your learning needs . . .</p>
+    </footer>
+
+
+
+
+    <!-- SMOOTH SCROLL  -->
+    <script src="/assets/smooth-scroll.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+    <!-- NAVBAR ON SCROLL  -->
+    <script>
+        $(function() {
+            $(document).scroll(function() {
+                var $nav = $(".navbar ");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > 100);
+            });
+        });
+
+        // DYNAMIC COURSE SEARCH
+        function myFunction() {
+            var input, filter, ul, li, h, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myCourses");
+            li = ul.querySelectorAll(".col-lg-3");
+            for (i = 0; i < li.length; i++) {
+                h = li[i].getElementsByTagName("h3")[0];
+                if (h.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+</html>

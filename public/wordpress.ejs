@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn-o-vate</title>
+    <link rel="icon" href="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2FLogo.png?v=1604814203497">
+    <link rel="stylesheet" href="/assets/CSS/main.css">
+    <link rel="stylesheet" href="/assets/CSS/coursepage.css">
+    <!-- bootstrap Link  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container-wrapper">
+    <!------NAVIGATION BAR-------->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+            <a class="navbar-brand" href="#"><img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2FclearLogo.png?v=1604814204563" alt="logo"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto ">
+                    <li class="nav-item active mr-1 dropdown">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown mr-1">
+                        <a class="nav-link screenSize" href="#">COURSES</a>
+
+                        <div class="dropdown-menu">
+
+                            <a class="dropdown-item" href="#">Best Picks</a>
+                            <a class="dropdown-item" href="#">Upload Course</a>
+
+                        </div>
+
+
+
+                    </li>
+                    <% if(!user) {%>
+                    <li class="nav-item  mr-1 dropdown">
+                        <a class="nav-link " href="/signin">REGISTER</a>
+
+                    </li>
+                    <li class="nav-item mr-1 dropdown">
+                        <a class="nav-link" href="/signin">SIGN IN</a>
+                    </li>
+                  <%}%>
+                  <%if(user) {%>
+                   <li class="nav-item mr-1 dropdown">
+                        <a class="nav-link  " href="/logout">LOG OUT</a>
+                    </li>
+                  <%}%>
+
+
+                </ul>
+            </div>
+
+        </nav>
+    </section>
+
+    <section id="course-best">
+        <p class="heading">wordpress&nbsp;<span>best picks</span></p>
+        <p class="subheading">Best hand picked videos recommed by Learn-o-vate for you to enjoy learning. Happy learning!</p>
+        <div class="container">
+            <div class="card">
+                <div class="side-one">
+                    <iframe class="video" 
+                        src="https://www.youtube.com/embed/FVqzKAUsM68" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="side-two">
+                    <div class="text">
+                        <p class="author"><span>By: </span>Learn-o-vate</p>
+                    </div>
+                    <form action="https://youtu.be/FVqzKAUsM68" target="_blank">
+                        <input class="button-watch" type="submit" value="WATCH">
+                    </form>
+                </div>
+            </div>
+            <div class="card">
+                <div class="side-one">
+                    <iframe class="video"
+                        src="https://www.youtube.com/embed/MoO-UsIvFIs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="side-two">
+                    <div class="text">
+                        <p class="author"><span>By: </span>Learn-o-vate</p>
+                    </div>
+                    <form action="https://youtu.be/MoO-UsIvFIs" target="_blank">
+                        <input class="button-watch" type="submit" value="WATCH">
+                    </form>
+                </div>
+            </div>
+            <div class="card">
+                <div class="side-one">
+                    <iframe class="video"
+                        src="https://www.youtube.com/embed/2aHVtWKPVXE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="side-two">
+                    <div class="text">
+                        <p class="author"><span>By: </span>Learn-o-vate</p>
+                    </div>
+                    <form action="https://youtu.be/2aHVtWKPVXE" target="_blank">
+                        <input class="button-watch" type="submit" value="WATCH">
+                    </form>
+                </div>
+            </div>
+            <div class="card">
+                <div class="side-one">
+                    <iframe class="video" 
+                        src="https://www.youtube.com/embed/KibbYf9avko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="side-two">
+                    <div class="text">
+                        <p class="author"><span>By: </span>Learn-o-vate</p>
+                    </div>
+                    <form action="https://youtu.be/KibbYf9avko" target="_blank">
+                        <input class="button-watch" type="submit" value="WATCH">
+                    </form>
+                </div>
+            </div>
+            <div class="card">
+                <div class="side-one">
+                    <iframe class="video" 
+                        src="https://www.youtube.com/embed/MREgql9jmf0?list=PLT9miexWCpPV9WxY_QG3qxUGKzw54LboW" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="side-two">
+                    <div class="text">
+                        <p class="author"><span>By: </span>Learn-o-vate</p>
+                    </div>
+                    <form action="https://youtu.be/MREgql9jmf0?list=PLT9miexWCpPV9WxY_QG3qxUGKzw54LboW" target="_blank">
+                        <input class="button-watch" type="submit" value="WATCH">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="course-other">
+        <p class="heading">wordpress&nbsp;<span>other picks</span></p>
+        <p class="subheading">Recommened by users and verified by us, so that you can never stop learning! Jump into these or recommed your own, get started now!</p>
+        <div class="container">
+            <div class="card">
+                <div class="side-one">
+                    <p>Comming Soon!</p>
+                </div>
+                <div class="side-two">
+                    <div class="text">
+                        <!-- <p class="author"><span>By: </span>Learn-o-vate</p> -->
+                        <p style="text-align: center; font-size: .8em;">Want to recommed a video? Get started by signing in!</p>
+                    </div>
+                    <!-- <form action="https://www.youtube.com/embed/tgbNymZ7vqY" target="_blank">
+                        <input class="button-watch" type="submit" value="WATCH">
+                    </form> -->
+                </div>
+            </div>
+            <div class="card">
+                <div class="side-one">
+                    <p>Comming Soon!</p>
+                </div>
+                <div class="side-two">
+                    <div class="text">
+                        <!-- <p class="author"><span>By: </span>Learn-o-vate</p> -->
+                        <p style="text-align: center; font-size: .8em;">Want to recommed a video? Get started by signing in!</p>
+                    </div>
+                    <!-- <form action="https://www.youtube.com/embed/tgbNymZ7vqY" target="_blank">
+                        <input class="button-watch" type="submit" value="WATCH">
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <footer>
+        <div class="social">
+            <ul>
+                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+        <p>&copy; COPYRIGHT 2020 | DEVELOPED BY TEAM TELESTO</p>
+    </footer>
+
+
+    <script src="js/ripple.js"></script>
+    <script>
+        $(window).on("load resize ", function() {
+            var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+            $('.tbl-header').css({
+                'padding-right': scrollWidth
+            });
+        }).resize();
+
+        $(window).on('scroll', function(){
+            if($(window).scrollTop()){
+                $('.navbar').addClass('black');
+            }
+            else{
+                $('.navbar').removeClass('black');
+            }
+    
+})
+    </script>
+</body>
+
+</html>

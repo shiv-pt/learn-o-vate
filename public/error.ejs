@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn-o-vate</title>
+    <link rel="icon" href="images/clearLogo.png">
+    <link rel="stylesheet" href="/assets/CSS/main.css">
+    <link rel="stylesheet" href="/assets/CSS/dashboard.css">
+    <link rel="stylesheet" href="/assets/CSS/error.css">
+    <!-- bootstrap Link  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+     <!------NAVIGATION BAR-------->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+            <a class="navbar-brand" href="/"><img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2FclearLogo.png?v=1604814204563" alt="logo"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto ">
+                    <li class="nav-item active mr-1 dropdown">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown mr-1">
+                        <a class="nav-link screenSize" href="#">COURSES</a>
+
+                        <div class="dropdown-menu">
+
+                            <a class="dropdown-item" href="#bestCourses">Best Picks</a>
+                            <a class="dropdown-item" href="#uploadCourse">Upload Course</a>
+
+                        </div>
+
+
+
+                    </li>
+                        <li class="nav-item  mr-1 dropdown">
+                            <a class="nav-link " href="/signin">REGISTER</a>
+
+                        </li>
+                        <li class="nav-item mr-1 dropdown">
+                            <a class="nav-link" href="/signin">SIGN IN</a>
+                        </li>
+                        
+                                <li class="nav-item  mr-1 dropdown">
+                                    <a class="nav-link " href="/dashboard">DASHBOARD</a>
+
+                                </li>
+                                <li class="nav-item mr-1 dropdown">
+                                    <a class="nav-link  " href="/logout">LOG OUT</a>
+                                </li>
+                               
+
+
+                </ul>
+            </div>
+
+        </nav>
+    </section>
+
+    <!-- ERROR CONTENT  -->
+
+    <div class="error-content text-center">
+        <div class="mario-animation">
+            <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2Fmario-flag.png?v=1605528492188" alt="mario" class="mario">
+            <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2Fmario-tower.png?v=1605271683263" alt="mario-tower" class="mario-tower">
+        </div>
+    </div>
+
+    <!-- ERROR CONTENT END  -->
+
+    <!-- FOOTER  -->
+    <footer>
+
+        <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2Fmario-wall.png?v=1605528504889" alt="wall" class="mario-wall">
+
+        <div class="social">
+            <ul>
+                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+        <p>&copy; COPYRIGHT 2020 | DEVELOPED BY TEAM TELESTO | Sorting your learning needs . . .</p>
+    </footer>
+
+
+
+
+    <!-- SMOOTH SCROLL  -->
+    <script src="smooth-scroll.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
+    <!-- NAVBAR ON SCROLL  -->
+    <script>
+        $(function() {
+            $(document).scroll(function() {
+                var $nav = $(".navbar ");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > 100);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

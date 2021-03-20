@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn-o-vate | Dashboard</title>
+    <link rel="icon" href="images/clearLogo.png">
+    <link rel="stylesheet" href="/assets/CSS/dashboard.css">
+    <!-- bootstrap Link  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 2px 5px 15px rgb(90, 88, 88);">
+        <a class="navbar-brand" href="/">
+            <img src="https://cdn.glitch.com/fe992e58-a383-4274-883d-404a89882c20%2FclearLogo.png?v=1604814204563" alt="logo" style="width:50px;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <span class="navbar-nav ml-auto" style="font-size: 1.6rem;letter-spacing: 0.1rem;"><b>DASHBOARD</b></span>
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item dropdown ml-5" style="font-size: 1.4rem;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-3 "><i class="fa fa-power-off " style="color: rgb(59, 59, 59) !important;"></i></span><span style="text-transform: capitalize;"><b><%=user.username%></b></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/logout">Logout</a>
+
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <section id="user-links">
+        <p class="table-heading">Submitted Links</p>
+        <div class="user-table">
+
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                        <tr>
+                            <th>REF NO.</th>
+                            <th>COURSE</th>
+                            <th>LINK</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>JAVA</td>
+                            <td>https://www.google.com/</td>
+                            <td>PENDING</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          <%let i = 1; for(const elem of subs.pending){ %>
+          <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td><%=++i%></td>
+                            <td><%=elem.name%></td>
+                            <td><%=elem.link%></td>
+                            <td>PENDING</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          <%}%>
+           <%for(const elem of subs.approved){ %>
+          <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td><%=++i%></td>
+                            <td><%=elem.name%></td>
+                            <td><%=elem.link%></td>
+                            <td>APPROVED</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          <%}%>
+        </div>
+    </section>
+
+    <div class="new-link">
+        <form class="form sumbit-form" action="/addSubmission" method="post">
+            <p class="heading">Your New Course Name</p>
+          <input class="input-field course-name" type="name" name="website" required placeholder=" Type New Course Name Here">
+          <p class="heading">Add a new link</p>
+            <p class="input-line">
+                <input class="input-field add-link" type="url" name="website" required placeholder=" Add new link here">
+                
+                <button class="button primary-button">SUBMIT</button>
+            </p>
+        </form>
+    </div>
+
+    <footer>
+        <div class="social">
+            <ul>
+                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+        <p>&copy; COPYRIGHT 2020 | DEVELOPED BY TEAM TELESTO | Sorting your learning needs . . .</p>
+    </footer>
+
+
+
+    <script>
+        $(window).on("load resize ", function() {
+            var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+            $('.tbl-header').css({
+                'padding-right': scrollWidth
+            });
+        }).resize();
+    </script>
+</body>
+
+</html>
