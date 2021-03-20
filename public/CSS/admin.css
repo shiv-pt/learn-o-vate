@@ -1,0 +1,84 @@
+.navbar {
+    background-color: rgba(255, 255, 255, 0)!important;
+    transition: .3s ease-in-out 0s;
+}
+
+.content {
+    top: 50px;
+    margin-left: 10vw;
+  margin-right: 10vw;
+    position: relative;
+}
+
+/* .hero-section{
+  min-height: 100vh!important;
+} */
+
+.hero-content{
+  width: 100%;
+}
+.hero-content .content{
+  width: 95%;
+  margin: 0;
+}
+
+.table{
+  width: 100%;
+  table-layout: fixed;
+}
+
+
+th {
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: .55em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.slno{
+  width: 10%;
+}
+
+
+td {
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle!important;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000;
+  background-color: rgba(255, 255, 255, .7);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  overflow-x: scroll;
+}
+
+td::-webkit-scrollbar {
+  background: transparent;
+  width: 0;
+  height: 0;
+}
+
+
+
+
+
+
+@media screen and (max-width:450px) {
+  th {
+      padding: 10px;
+  }
+  td {
+      font-size: 10px;
+      padding: 10px;
+  }
+  .btn{
+    margin: 0;
+    padding: 0;
+    margin: 5px 0;
+    font-size: .55em!important;
+    font-weight: 400;
+    /* overflow-x: hidden!important; */
+  }
+}
